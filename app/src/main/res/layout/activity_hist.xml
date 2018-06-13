@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="engin.natink.hist">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstline"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:text="Location has been sent "
+            android:textSize="25dp"
+            android:textStyle="italic"
+            android:visibility="invisible"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/secondline"
+            android:layout_below="@+id/firstline"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="to the emergency contact "
+            android:textSize="23dp"
+            android:textStyle="italic"
+            android:visibility="invisible"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thirdline"
+            android:layout_below="@+id/secondline"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="23dp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            android:text=" sucessfully"/>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/action_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Share App" />
+
+        <item
+            android:id="@+id/feed"
+            android:icon="@drawable/feedback"
+            android:title="Feedback" />
+        <item
+            android:id="@+id/repus"
+            android:icon="@drawable/feedback"
+            android:title="Report a Bug" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/lik_e"
+                android:icon="@drawable/like"
+                android:title="Like Us" />
+            <item
+                android:id="@+id/eng_in"
+                android:icon="@drawable/engin"
+                android:title="About EngIN" />
+
+
+        </menu>
+
+</item>
+
+</menu>

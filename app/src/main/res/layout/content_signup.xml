@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="engin.natink.signup"
+    tools:showIn="@layout/activity_signup">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="475dp"
+        android:background="@drawable/values"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:gravity="center"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp">
+        <EditText
+            android:id="@+id/na_me"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/e_mail"
+
+            android:background="@drawable/values"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="   Name"
+            android:inputType="textPersonName"
+            android:text=""
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="45dp" />
+        <EditText
+            android:id="@+id/e_mail"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/values"
+            android:ems="10"
+            android:hint="   E-mail"
+            android:inputType="textEmailAddress"
+            android:text=""
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="101dp"
+            android:gravity="center"
+            android:layout_below="@+id/na_me"
+            android:layout_alignStart="@+id/pass_word" />
+
+
+
+        <EditText
+            android:id="@+id/pass_word"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="21dp"
+            android:background="@drawable/values"
+            android:ems="10"
+            android:hint=" Password"
+            android:inputType="textPassword"
+            android:text=""
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="161dp"
+            android:gravity="center"
+            android:layout_below="@+id/e_mail"
+            android:layout_alignStart="@+id/con_firm" />
+
+        <EditText
+            android:id="@+id/con_firm"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="23dp"
+            android:background="@drawable/values"
+            android:ems="10"
+            android:hint=" Confirm Password"
+            android:inputType="textPassword"
+
+            android:text=""
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="215dp"
+            android:gravity="center"
+            android:layout_below="@+id/pass_word"
+            android:layout_alignStart="@+id/phone_number" />
+
+        <Spinner
+            android:id="@+id/blood_group"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:entryValues="@array/blood_group_values"
+            android:layout_marginTop="21dp"
+            android:autofillHints="Blood group"
+            android:entries="@array/blood_group"
+            android:gravity="center"
+            android:layout_below="@+id/phone_number"
+            android:layout_alignStart="@+id/se_x" />
+
+        <Spinner
+            android:id="@+id/se_x"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:entryValues="@array/se_x2"
+            android:layout_marginTop="21dp"
+
+            android:entries="@array/se_x1"
+            android:gravity="center"
+            android:layout_below="@+id/phone_number"
+            android:layout_alignStart="@+id/se_x" />
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/values"
+            android:ems="10"
+
+            android:hint="   Phone number"
+            android:inputType="phone"
+            android:text=""
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="275dp"
+            android:gravity="center"
+            android:layout_below="@+id/con_firm"
+            android:layout_alignStart="@+id/blood_group" />
+
+        <Button
+            android:id="@+id/veri_fy"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:layout_gravity="center"
+            android:text="Verify"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="423dp"
+            android:gravity="center"
+            android:layout_below="@+id/se_x"
+            android:layout_centerHorizontal="true" />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
