@@ -64,8 +64,6 @@ public class MainActivity extends AppCompatActivity
     private static final int MY_PERMISSIONS_REQUESTED_SEND_SMS = 0;
     double latitude,longitude;
     ProgressDialog progressDialog;
-    MediaPlayer mediaPlayer;
-    ImageButton imageButton2;
     ArrayList<String> sendmessage = new ArrayList<String>();
     String uriString;
     int i=0,j=0,locationSent=0,sendMessage=0, initial1,number=0;
@@ -102,36 +100,7 @@ public class MainActivity extends AppCompatActivity
 
         //setvalue();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.siren);
 
-
-        imageButton2 = (ImageButton)findViewById(R.id.imageButton2);
-        imageButton2.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("MissingPermission")
-            @Override
-            public void onClick(View v) {
-                number++;
-
-                    if ((number % 2) == 0) {
-
-                            mediaPlayer.start();
-
-
-                    } else if ((number % 2) == 1) {
-                       // mediaPlayer.stop();
-
-                }
-               /* progressDialog = new ProgressDialog(MainActivity.this);
-                progressDialog.setMessage("Please wait..."); // Setting Message
-                progressDialog.setTitle("Getting location"); // Setting Title
-                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
-                progressDialog.show(); // Display Progress Dialog
-
-                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 3000, locationListener);
-                    sendMessage=1;*/
-
-            }
-        });
         setSupportActionBar(toolbar);
        getnotification();
        //geterrornotifcation();
@@ -607,7 +576,11 @@ public class MainActivity extends AppCompatActivity
         editor1.putInt("SNOW_DENSITY1",initial1);
         editor1.commit();
     }
-    
+   @SuppressLint("MissingPermission")
+   public void sendmessagefun(View view){
+        sendMessage=1;
+       locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 300, locationListener);
+   }
 }
 
 
