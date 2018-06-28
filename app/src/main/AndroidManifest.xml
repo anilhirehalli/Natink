@@ -39,7 +39,7 @@
             android:label="@string/title_activity_login" />
         <activity
             android:name=".aboutus"
-            android:label="About Nat ink" />
+            android:label="About" />
         <activity
             android:name=".aboutengin"
             android:label="About EngIN" />

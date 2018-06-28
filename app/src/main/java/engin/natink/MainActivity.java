@@ -33,6 +33,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity
     protected LocationManager locationManager;
     protected LocationListener locationListener;
     private static final int MY_PERMISSIONS_REQUESTED_SEND_SMS = 0;
+    private static final int PERMISSIONS_REQUEST_READ_CONTACTS = 100;
     double latitude,longitude;
     ProgressDialog progressDialog;
     ArrayList<String> sendmessage = new ArrayList<String>();
@@ -79,6 +81,18 @@ public class MainActivity extends AppCompatActivity
         else
         {
             ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.SEND_SMS},MY_PERMISSIONS_REQUESTED_SEND_SMS);
+        }
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS);
+
+        if (permissionCheck == PackageManager.PERMISSION_GRANTED ) {
+            //Name of Method for Calling Message
+
+
+        } else {
+            //TODO
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.READ_CONTACTS},
+                    PERMISSIONS_REQUEST_READ_CONTACTS);
         }
         checkvalue();
         setvalue();
@@ -466,7 +480,7 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.eng_in) {
-            Intent intent = new Intent(MainActivity.this, aboutengin.class);
+            Intent intent = new Intent(MainActivity.this, aboutus.class);
             startActivity(intent);
 
 

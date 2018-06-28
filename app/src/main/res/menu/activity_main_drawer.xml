@@ -26,8 +26,8 @@
                 android:title="Like Us" />
             <item
                 android:id="@+id/eng_in"
-                android:icon="@drawable/engin"
-                android:title="About EngIN" />
+                android:icon="@drawable/aboutus1"
+                android:title="About" />
 
 
         </menu>

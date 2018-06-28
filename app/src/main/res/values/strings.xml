@@ -58,8 +58,8 @@
     <string name="slide_1_title">IN EMERGENCY..?</string>
     <string name="slide_1_desc">The Simpliest way to send a request and your location to your trusted once!</string>
 
-    <string name="slide_2_title">PRESS NOTIFICATION</string>
-    <string name="slide_2_desc">The message can be sent just by pressing the notification</string>
+    <string name="slide_2_title">Send Emergency Message</string>
+    <string name="slide_2_desc">The message can be sent just by pressing the Send Emergency message</string>
 
     <string name="slide_3_title">Alert...!! </string>
     <string name="slide_3_desc">Always turn on your GPS for your safety</string>
